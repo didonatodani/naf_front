@@ -4,10 +4,25 @@
     box-sizing: border-box;
     /* change this! */
     font-family: monospace;
-    font-size: 18px;
+    font-size: 10px;
 }
 
+
+p, a, li, span, strong, button, small{
+    font-size: 1.8rem;
+}
 a{
     color: black;
     text-decoration: none;
 }
+
+a:hover, button:hover{
+    cursor: pointer;
+    font-weight: 900;
+}
+
+/* mediaqueries:
+mobile till 576, (@media (min-width: 576px)
+tablets till 750, 
+desktop from 1024
+*/

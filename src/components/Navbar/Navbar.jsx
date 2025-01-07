@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 import Logo from "../../assets/logo.png";
@@ -51,12 +51,12 @@ function Navbar() {
       {/* navbar*/}
       {showMenu && (
         <nav className="navbar">
-          <Link to={"/"} onClick={closeMenu}>
+          <NavLink to={"/"} onClick={closeMenu}>
             Home
-          </Link>
-          <Link to={"/about"} onClick={closeMenu}>
+          </NavLink>
+          <NavLink to={"/about"} onClick={closeMenu}>
             About Us
-          </Link>
+          </NavLink>
 
           {/* dropdown for projects */}
           <div className="dropdown-menu">
@@ -71,27 +71,27 @@ function Navbar() {
             {showDropdown && (
               <ul className="dropdown-ul">
                 <li>
-                  <Link to={"/construction"} onClick={closeMenu}>
+                  <NavLink to={"/construction"} onClick={closeMenu}>
                     Construction
-                  </Link>
+                  </NavLink>
                 </li>
                 <li>
-                  <Link to={"/bim"} onClick={closeMenu}>
+                  <NavLink to={"/bim"} onClick={closeMenu}>
                     BIM
-                  </Link>
+                  </NavLink>
                 </li>
                 <li>
-                  <Link to={"/woodframe"} onClick={closeMenu}>
+                  <NavLink to={"/woodframe"} onClick={closeMenu}>
                     Wood Frame
-                  </Link>
+                  </NavLink>
                 </li>
               </ul>
             )}
           </div>
 
-          <Link to={"/contact"} onClick={closeMenu}>
+          <NavLink to={"/contact"} onClick={closeMenu}>
             Contact Us
-          </Link>
+          </NavLink>
         </nav>
       )}
     </header>
