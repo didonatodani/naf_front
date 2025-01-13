@@ -29,6 +29,7 @@ function App() {
 
         {/* only one details page for any type of project */}
         <Route path="/:category/:_id" element={<DetailsPage />} />
+        
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
       <Footer />

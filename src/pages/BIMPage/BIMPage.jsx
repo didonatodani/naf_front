@@ -8,6 +8,8 @@ const API_URL = import.meta.env.VITE_API_URL;
 function BIMPage() {
   const [data, setData] = useState([]);
 
+  // CREATE CUSTOM HOOK TO FETCH DATA!!
+
   async function fetchBIM() {
     try {
       const response = await axios.get(`${API_URL}/bim`);

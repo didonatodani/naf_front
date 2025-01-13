@@ -8,6 +8,8 @@ const API_URL = import.meta.env.VITE_API_URL;
 function ConstructionPage() {
   const [data, setData] = useState([]);
 
+    // CREATE CUSTOM HOOK TO FETCH DATA!!
+    
   async function fetchConstruction() {
     try {
       const response = await axios.get(`${API_URL}/construction`);
