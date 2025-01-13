@@ -34,7 +34,7 @@ function ContactPage() {
 
   async function handleSubmit(formData) {
     try {
-      const response = await axios.post(`${API_URL}/api/contact`, formData);
+      const response = await axios.post(`${API_URL}/contact`, formData);
       console.log("this is the data sent", response.data);
     } catch (error) {
       console.log("error posting data", error.config.message);
@@ -61,7 +61,7 @@ function ContactPage() {
           <input type="text" name="message" id="message" />
         </div>
         <button type="submit" disabled={isPending}>
-          submit
+          Send Message
         </button>
       </form>
     </section>
