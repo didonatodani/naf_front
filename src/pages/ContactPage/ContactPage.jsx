@@ -1,4 +1,4 @@
-// ADD ERROR HANDLING! ESPECIALLY WHEN NOT TYPING CORRECT EMAIL ADDRESS THAT WONT SEND THE MESSAGE TO EMAIL ACCOUNT
+// ADD ERROR HANDLING!
 
 import "./ContactPage.css";
 import newtworkImg from "../../assets/network.jpg";
