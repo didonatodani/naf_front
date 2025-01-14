@@ -1,3 +1,8 @@
+// ADD ERROR HANDLING! ESPECIALLY WHEN NOT TYPING CORRECT EMAIL ADDRESS THAT WONT SEND THE MESSAGE TO EMAIL ACCOUNT
+
+import "./ContactPage.css";
+import newtworkImg from "../../assets/network.jpg";
+
 import axios from "axios";
 import { useActionState } from "react";
 const API_URL = import.meta.env.VITE_API_URL;
@@ -42,28 +47,40 @@ function ContactPage() {
   }
 
   return (
-    <section>
-      <form action={formAction}>
-        <div className="form-div">
-          <label htmlFor="fullName">Full name:</label>
-          <input type="text" name="fullName" id="fullName" />
+    <section className="contact-section">
+      <div className="contact-content-container">
+        <div className="left-contact-div">
+          <img src={newtworkImg} alt="newtwork image" className="contact-img" />
+          <p>info@naf-group.com</p>
+          <p>34234234324</p>
+          <a href="https://www.linkedin.com/company/naf-ar/posts/?feedView=all" target="_blank">Linkedin</a>
         </div>
-        <div className="form-div">
-          <label htmlFor="email">Email:</label>
-          <input type="email" name="email" id="email" />
+        <div className="form-container">
+          <h2>Contact us</h2>
+          <p>We'll get in touch as soon as possible.</p>
+          <form action={formAction} className="contact-form">
+            <div className="form-div">
+              <label htmlFor="fullName">Full name</label>
+              <input type="text" name="fullName" id="fullName" />
+            </div>
+            <div className="form-div">
+              <label htmlFor="email">Email</label>
+              <input type="email" name="email" id="email" />
+            </div>
+            <div className="form-div">
+              <label htmlFor="phone">Phone</label>
+              <input type="number" name="phone" id="phone" />
+            </div>
+            <div className="form-div">
+              <label htmlFor="message">Message</label>
+              <textarea name="message" id="message"></textarea>
+            </div>
+            <button type="submit" disabled={isPending} className="submit-btn">
+              Send Message
+            </button>
+          </form>
         </div>
-        <div className="form-div">
-          <label htmlFor="phone">Phone:</label>
-          <input type="number" name="phone" id="phone" />
-        </div>
-        <div className="form-div">
-          <label htmlFor="message">Message:</label>
-          <input type="text" name="message" id="message" />
-        </div>
-        <button type="submit" disabled={isPending}>
-          Send Message
-        </button>
-      </form>
+      </div>
     </section>
   );
 }

@@ -1,0 +1,102 @@
+.contact-section {
+    background-color: var(--background);
+    padding: 3rem;
+}
+
+.contact-content-container {
+    width: fit-content;
+    padding: 1rem;
+    margin: 0 auto;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    gap: 1rem;
+    color: var(--dark-background);
+    background-color: var(--white);
+
+}
+
+.left-contact-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem
+}
+
+.contact-img {
+    /* display image only in desktop */
+    display: none;
+}
+
+.form-container {
+    padding: 2rem 1.5rem;
+    max-width: 40rem;
+    border-radius: 2rem;
+    background-color: var(--background);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-form {
+    .form-div {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        margin: 1rem auto;
+    }
+
+    input,
+    textarea {
+        padding: 0.5rem;
+        font-size: 1.5rem;
+        border: 1px solid var(--disabled-prim);
+        border-radius: 0.5rem;
+    }
+
+    #message {
+        min-width: 100%;
+        max-width: 100%;
+    }
+
+    .submit-btn {
+        width: 100%;
+        background-color: var(--secondary);
+        color: var(--background);
+        border: none;
+        border-radius: 0.5rem;
+        padding: 0.5rem;
+        margin-top: 2rem;
+    }
+
+    .submit-btn:hover {
+        box-shadow: 0 0.5em 0.5em -0.4em var(--dark-background);
+        transform: translateY(-0.25em);
+        transition: 500ms;
+}
+
+}
+
+/* MEDIA QUERIES */
+
+@media (min-width: 750px) {
+    .contact-content-container {
+        flex-direction: row;
+    }
+
+    .left-contact-div {
+        padding: 0 0 2rem;
+    }
+
+    .contact-img {
+        display: inline-block;
+        width: 20rem;
+        height: 35rem;
+        border-radius: 2rem;
+        object-fit: cover;
+        filter: contrast(70%);
+    }
+}
