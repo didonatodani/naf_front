@@ -1,3 +1,4 @@
+/* H1 CONTAINER */
 .h1-container {
     height: 100vh;
     align-content: end;
@@ -14,6 +15,7 @@
     }
 }
 
+/* MANIFESTO CONTAINER */
 .manifesto-container {
     background-color: var(--fonts);
     padding: 10rem;
@@ -26,11 +28,58 @@
         color: var(--background);
         line-height: 5rem;
     }
-    h2{
+
+    h2 {
         margin-bottom: 5rem;
     }
 }
 
+/* SERVICES CONTAINER */
+.services-container {
+    padding: 5rem;
+    text-align: center;
+    min-height: 85vh;
+    align-content: center;
+}
+
+.services-article-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 5rem;
+}
+
+.services-article {
+    display: flex;
+    align-items: end;
+    width: 100%;
+    height: 10rem;
+
+    h3 {
+        text-align: left;
+        font-size: 3rem;
+        border-bottom: 1px solid var(--fonts);
+        width: 100%;
+    }
+
+    .services-article-img {
+        display: none;
+        width: 20%;
+        height: 100%;
+        object-fit: cover;
+        object-position: bottom;
+    }
+}
+.services-article:hover, .services-article:focus{
+    cursor: pointer;
+        h3{
+            border-bottom: 4px solid var(--fonts);
+        }
+    
+    .services-article-img{
+        display: block;
+    }
+}
 
 /* MEDIA QUERIES */
 
@@ -43,5 +92,28 @@
 @media (min-width: 750px) {
     h1 {
         font-size: 5rem;
+    }
+    .services-article{
+        h3{
+            font-size: 5rem;
+        }
+    }
+    .services-article:hover{
+        cursor: pointer;
+            h3{
+                border-bottom: 4px solid var(--fonts);
+            }
+        
+        .services-article-img{
+            display: block;
+        }
+    }
+}
+
+@media (min-width: 1024px){
+    .services-article{
+        h3{
+            font-size: 8rem;
+        }
     }
 }
