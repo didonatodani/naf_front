@@ -23,7 +23,7 @@ function WoodPage() {
     fetchWood();
   }, []);
   return (
-    <section>
+    <section className="section">
       {/* rendering data */}
       {data.map((projectInfo, index) => {
         return (

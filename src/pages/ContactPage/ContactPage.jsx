@@ -47,7 +47,7 @@ function ContactPage() {
   }
 
   return (
-    <section className="contact-section">
+    <section className="contact-section section">
       <div className="contact-content-container">
         <div className="left-contact-div">
           <img src={newtworkImg} alt="newtwork image" className="contact-img" />

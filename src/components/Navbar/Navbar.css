@@ -1,9 +1,10 @@
 .header {
-    background-color: rgb(247, 236, 222);
-    padding: 1rem;
+    background-color: #f1eeefe2;
+    padding: 2rem;
     display: flex;
     justify-content: space-between;
     align-items: baseline;
+    height: 12rem;
 }
 
 #navbar-logo {
@@ -23,7 +24,6 @@
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgb(247, 236, 222, 0.557);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -32,7 +32,6 @@
 
 }
 .dropdown-btn{
-
     border: none;
     background: none;
 }
@@ -43,7 +42,8 @@
 }
 
 .active{
-    color: blue;
+    color: var(--accent);
+    font-weight: 500;
 }
 
 /* MEDIA QUERIES */
@@ -55,11 +55,23 @@
         flex-direction: row;
         width: fit-content;
         gap: 3rem;
+        height: fit-content;
     }
     .dropdown-ul{
         position: absolute;
         z-index: 1;
-        background-color: rgb(247, 236, 222);
 
+    }
+}
+
+@media (min-width: 1024px){
+    .header{
+        position: fixed;
+        width: 100%;
+    }
+    .navbar{
+        left: auto;
+        right: 2rem;
+        top: 5rem;
     }
 }

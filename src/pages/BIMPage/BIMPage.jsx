@@ -26,7 +26,7 @@ function BIMPage() {
   }, []);
 
   return (
-    <section>
+    <section className="section">
       {/* rendering data */}
       {data.map((projectInfo, index) => {
         return (

@@ -1,6 +1,6 @@
 function NotFoundPage(){
     return (
-      <div>NotFoundPage</div>
+      <section className="section">NotFoundPage</section>
     )
   }
   
