@@ -1,17 +1,16 @@
 .project-card-container {
     /* delete this */
-    border: 2px solid var(--secondary);
-    background-color: var(--background);
+    background-color: var(--grey);
+    border: 1px solid var(--blue);
     /* until here */
-
-    max-width: 30rem;
-    padding: 1.5rem;
-    border-radius: 2rem;
+    max-width: 35rem;
+    min-width: 20rem;
     position: relative;
 }
 
 .project-title {
-    margin-top: 1rem;
+   padding: 1.5rem;
+
 
 }
 
@@ -21,11 +20,9 @@
     aspect-ratio: 6 / 7;
     max-height: 35rem;
     object-fit: cover;
-    border-radius: 1.5rem;
 }
 
 .overlay {
-    border-radius: 2rem;
     position: absolute;
     top: 0;
     left: 0;

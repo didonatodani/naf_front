@@ -27,11 +27,13 @@ function BIMPage() {
   }, []);
 
   return (
-    <section className="section">
-      <h1>BIM Services</h1>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque iure, earum, possimus, ad accusamus molestias corrupti molestiae quod ullam doloremque nisi architecto vero quisquam dolorum nulla! Modi officia magnam laudantium.
-      Numquam quidem officia officiis natus dolore inventore consectetur laboriosam doloribus eaque qui quasi voluptate ullam, ex facere dignissimos repellendus exercitationem quis ut voluptas? Asperiores, eum iste! Reprehenderit odit possimus officiis.
-      </p>
+    <section className="projects-section section">
+      <div className="projects-title-container">
+        <h1>BIM PROJECTS</h1>
+        <p>very very short description here.</p>
+      </div>
+
+      <div className="projects-card-container">
       {/* rendering data */}
       {data.map((projectInfo, index) => {
         return (
@@ -40,6 +42,7 @@ function BIMPage() {
           </Link>
         );
       })}
+      </div>
     </section>
   );
 }

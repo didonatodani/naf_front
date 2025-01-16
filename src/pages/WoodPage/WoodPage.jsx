@@ -19,12 +19,20 @@ function WoodPage() {
       }
     }
   }
+  
   useEffect(() => {
     window.scrollTo(0, 0);
     fetchWood();
   }, []);
+
   return (
-    <section className="section">
+    <section className="projects-section section">
+      <div className="projects-title-container">
+        <h1>WOOD FRAME PROJECTS</h1>
+        <p>very very short description here.</p>
+      </div>
+
+      <div className="projects-card-container">
       {/* rendering data */}
       {data.map((projectInfo, index) => {
         return (
@@ -33,6 +41,7 @@ function WoodPage() {
           </Link>
         );
       })}
+      </div>
     </section>
   );
 }
