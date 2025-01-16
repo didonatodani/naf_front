@@ -4,7 +4,7 @@ import "./ContactPage.css";
 import newtworkImg from "../../assets/network.jpg";
 
 import axios from "axios";
-import { useActionState } from "react";
+import { useActionState, useEffect } from "react";
 const API_URL = import.meta.env.VITE_API_URL;
 
 function ContactPage() {
@@ -45,7 +45,9 @@ function ContactPage() {
       console.log("error posting data", error.config.message);
     }
   }
-
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <section className="contact-section section">
       <div className="contact-content-container">
@@ -53,7 +55,12 @@ function ContactPage() {
           <img src={newtworkImg} alt="newtwork image" className="contact-img" />
           <p>info@naf-group.com</p>
           <p>34234234324</p>
-          <a href="https://www.linkedin.com/company/naf-ar/posts/?feedView=all" target="_blank">Linkedin</a>
+          <a
+            href="https://www.linkedin.com/company/naf-ar/posts/?feedView=all"
+            target="_blank"
+          >
+            Linkedin
+          </a>
         </div>
         <div className="form-container">
           <h2>Contact us</h2>

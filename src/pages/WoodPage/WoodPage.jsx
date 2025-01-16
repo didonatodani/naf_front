@@ -20,6 +20,7 @@ function WoodPage() {
     }
   }
   useEffect(() => {
+    window.scrollTo(0, 0);
     fetchWood();
   }, []);
   return (

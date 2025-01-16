@@ -52,11 +52,11 @@ function Navbar() {
         {/* navbar*/}
         {showMenu && (
           <nav className="navbar">
-            <NavLink to={"/"} onClick={closeMenu}>
-              Home
-            </NavLink>
             <NavLink to={"/about"} onClick={closeMenu}>
               About Us
+            </NavLink>
+            <NavLink to={"/services"} onClick={closeMenu}>
+              Services
             </NavLink>
 
             {/* dropdown for projects */}
@@ -67,7 +67,7 @@ function Navbar() {
                   setShowDropdown(!showDropdown);
                 }}
               >
-                Projects ↓
+                Portfolio ↓
               </button>
               {showDropdown && (
                 <ul className="dropdown-ul">
@@ -78,7 +78,7 @@ function Navbar() {
                   </li>
                   <li>
                     <NavLink to={"/bim"} onClick={closeMenu}>
-                      BIM
+                      BIM Design
                     </NavLink>
                   </li>
                   <li>

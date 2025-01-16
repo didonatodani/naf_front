@@ -22,11 +22,16 @@ function BIMPage() {
     }
   }
   useEffect(() => {
+    window.scrollTo(0, 0);
     fetchBIM();
   }, []);
 
   return (
     <section className="section">
+      <h1>BIM Services</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque iure, earum, possimus, ad accusamus molestias corrupti molestiae quod ullam doloremque nisi architecto vero quisquam dolorum nulla! Modi officia magnam laudantium.
+      Numquam quidem officia officiis natus dolore inventore consectetur laboriosam doloribus eaque qui quasi voluptate ullam, ex facere dignissimos repellendus exercitationem quis ut voluptas? Asperiores, eum iste! Reprehenderit odit possimus officiis.
+      </p>
       {/* rendering data */}
       {data.map((projectInfo, index) => {
         return (

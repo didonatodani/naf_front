@@ -4,6 +4,7 @@ import bimImg from "../../assets/bim.png";
 import woodImg from "../../assets/wood.png";
 import "./HomePage.css";
 
+import { Link } from "react-router-dom";
 import { useRef } from "react";
 
 function HomePage() {
@@ -49,30 +50,36 @@ function HomePage() {
       <div className="services-container">
         <h2>Our Services</h2>
         <div className="services-article-container">
-          <article className="services-article">
-            <h3 className="services-article-title">Construction →</h3>
-            <img
-              src={constructionImg}
-              alt="construction image"
-              className="services-article-img"
-            />
-          </article>
-          <article className="services-article">
-            <h3 className="services-article-title">Wood Frame →</h3>
-            <img
-              src={woodImg}
-              alt="wood frame image"
-              className="services-article-img"
-            />
-          </article>
-          <article className="services-article">
-            <h3 className="services-article-title">BIM Design →</h3>
-            <img
-              src={bimImg}
-              alt="BIM image"
-              className="services-article-img"
-            />
-          </article>
+          <Link to={"/construction"}>
+            <article className="services-article">
+              <h3 className="services-article-title">Construction →</h3>
+              <img
+                src={constructionImg}
+                alt="construction image"
+                className="services-article-img"
+              />
+            </article>
+          </Link>
+          <Link to={"/woodframe"}>
+            <article className="services-article">
+              <h3 className="services-article-title">Wood Frame →</h3>
+              <img
+                src={woodImg}
+                alt="wood frame image"
+                className="services-article-img"
+              />
+            </article>
+          </Link>
+          <Link to={"/bim"}>
+            <article className="services-article">
+              <h3 className="services-article-title">BIM Services →</h3>
+              <img
+                src={bimImg}
+                alt="BIM image"
+                className="services-article-img"
+              />
+            </article>
+          </Link>
         </div>
       </div>
     </section>
