@@ -7,14 +7,14 @@ Rest: font-family: "Montserrat", serif;
 
 /* VARIABLES */
 :root {
-    --primary: #C9A279;
-    --accent: #1E8EB6;
-    --background: #F1EEEF;
-    --fonts: #1A344D;
+    --beige: #C9A279;
+    --cian: #1E8EB6; 
+    --grey: #F1EEEF;
+    --blue: #1A344D;
     --black: #000000;
     --white: #ffffff;
-    --disabled-prim: #d1ccc7;
-    --disabled-accent: #a0b2b8;
+    --disabled-beige: #d1ccc7;
+    --disabled-blue: #a0b2b8;
 }
 
 /* GENERAL SETTINGS */
@@ -24,7 +24,7 @@ Rest: font-family: "Montserrat", serif;
     box-sizing: border-box;
     font-family: "Montserrat", serif;
     font-size: 10px;
-    color: var(--fonts);
+    color: var(--blue);
 }
 
 
@@ -69,7 +69,7 @@ button {
 
 button:hover {
     font-weight: 600;
-    box-shadow: 0 0.5em 0.5em -0.4em var(--fonts);
+    box-shadow: 0 0.5em 0.5em -0.4em var(--blue);
     transform: translateY(-0.25em);
     transition: 500ms;
 }

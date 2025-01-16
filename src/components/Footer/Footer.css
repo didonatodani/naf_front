@@ -1,12 +1,12 @@
 .footer {
-    border: 1px solid var(--dark-background);
+    border: 1px solid var(--blue);
     height: 20rem;
     padding: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    color: white;
+    color: var(--white);
 }
 
 
@@ -25,7 +25,7 @@
 
 .footer-btn {
     background: none;
-    color: white;
+    color: var(--white);
     border: none;
 }
 

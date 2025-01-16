@@ -1,14 +1,14 @@
 /* H1 CONTAINER */
 .h1-container {
-    height: 100vh;
+    height: calc(100vh - 12rem);
     align-content: end;
     padding: 5rem 2rem;
 }
 
 .explore-btn {
     margin-top: 10rem;
-    background-color: var(--accent);
-    color: var(--background);
+    background-color: var(--cian);
+    color: var(--grey);
 
     #explore-btn-arrow {
         align-self: flex-end;
@@ -17,15 +17,15 @@
 
 /* MANIFESTO CONTAINER */
 .manifesto-container {
-    background-color: var(--fonts);
-    padding: 10rem;
+    background-color: var(--blue);
+    padding: 12rem 10rem 10rem;
     align-content: center;
     min-height: 85vh;
 
     h2,
     p {
         text-align: center;
-        color: var(--background);
+        color: var(--grey);
         line-height: 5rem;
     }
 
@@ -58,12 +58,13 @@
     h3 {
         text-align: left;
         font-size: 3rem;
-        border-bottom: 1px solid var(--fonts);
+        border-bottom: 1px solid var(--blue);
         width: 100%;
     }
 
     .services-article-img {
-        display: none;
+        visibility: hidden;
+        opacity: 0;
         width: 20%;
         height: 100%;
         object-fit: cover;
@@ -73,11 +74,14 @@
 .services-article:hover, .services-article:focus{
     cursor: pointer;
         h3{
-            border-bottom: 4px solid var(--fonts);
+            transition: 0.4s;
+            border-bottom: 4px solid var(--blue);
         }
     
     .services-article-img{
-        display: block;
+        transition: opacity 0.4s;
+        visibility: visible;
+        opacity: 1;
     }
 }
 
@@ -101,7 +105,7 @@
     .services-article:hover{
         cursor: pointer;
             h3{
-                border-bottom: 4px solid var(--fonts);
+                border-bottom: 4px solid var(--blue);
             }
         
         .services-article-img{

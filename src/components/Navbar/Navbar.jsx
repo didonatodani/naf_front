@@ -19,7 +19,7 @@ function Navbar() {
   // handle screen sizes for menu display
   useEffect(() => {
     function handleResize() {
-      if (window.innerWidth > 575) {
+      if (window.innerWidth > 750) {
         setShowMenu(true);
         setShowMenuIcon(false);
       } else {
@@ -32,69 +32,71 @@ function Navbar() {
   }, []);
 
   return (
-    <header className="header">
-      <Link to={"/"}>
-        <img src={Logo} alt="NAF logo" id="navbar-logo" />
-      </Link>
+    <div className="header-container">
+      <header className="header">
+        <Link to={"/"}>
+          <img src={Logo} alt="NAF logo" id="navbar-logo" />
+        </Link>
 
-      {showMenuIcon && (
-        <img
-          src={MenuIcon}
-          alt="menu-icon"
-          id="menu-icon"
-          onClick={() => {
-            setShowMenu(!showMenu);
-          }}
-        />
-      )}
+        {showMenuIcon && (
+          <img
+            src={MenuIcon}
+            alt="menu-icon"
+            id="menu-icon"
+            onClick={() => {
+              setShowMenu(!showMenu);
+            }}
+          />
+        )}
 
-      {/* navbar*/}
-      {showMenu && (
-        <nav className="navbar">
-          <NavLink to={"/"} onClick={closeMenu}>
-            Home
-          </NavLink>
-          <NavLink to={"/about"} onClick={closeMenu}>
-            About Us
-          </NavLink>
+        {/* navbar*/}
+        {showMenu && (
+          <nav className="navbar">
+            <NavLink to={"/"} onClick={closeMenu}>
+              Home
+            </NavLink>
+            <NavLink to={"/about"} onClick={closeMenu}>
+              About Us
+            </NavLink>
 
-          {/* dropdown for projects */}
-          <div className="dropdown-menu">
-            <button
-              className="dropdown-btn"
-              onClick={() => {
-                setShowDropdown(!showDropdown);
-              }}
-            >
-              Projects ↓
-            </button>
-            {showDropdown && (
-              <ul className="dropdown-ul">
-                <li>
-                  <NavLink to={"/construction"} onClick={closeMenu}>
-                    Construction
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink to={"/bim"} onClick={closeMenu}>
-                    BIM
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink to={"/woodframe"} onClick={closeMenu}>
-                    Wood Frame
-                  </NavLink>
-                </li>
-              </ul>
-            )}
-          </div>
+            {/* dropdown for projects */}
+            <div className="dropdown-menu">
+              <button
+                className="dropdown-btn"
+                onClick={() => {
+                  setShowDropdown(!showDropdown);
+                }}
+              >
+                Projects ↓
+              </button>
+              {showDropdown && (
+                <ul className="dropdown-ul">
+                  <li>
+                    <NavLink to={"/construction"} onClick={closeMenu}>
+                      Construction
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink to={"/bim"} onClick={closeMenu}>
+                      BIM
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink to={"/woodframe"} onClick={closeMenu}>
+                      Wood Frame
+                    </NavLink>
+                  </li>
+                </ul>
+              )}
+            </div>
 
-          <NavLink to={"/contact"} onClick={closeMenu}>
-            Contact Us
-          </NavLink>
-        </nav>
-      )}
-    </header>
+            <NavLink to={"/contact"} onClick={closeMenu}>
+              Contact Us
+            </NavLink>
+          </nav>
+        )}
+      </header>
+    </div>
   );
 }
 
