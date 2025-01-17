@@ -1,4 +1,4 @@
-![NAF Logo](src/assets/logo.jpg)
+![NAF Logo](src/assets/logo.png)
 
 # NAF App - Frontend Repositoty
 This is the frontend repository for the NAF App, a full-stack web application developed to showcase NAF’s services and projects in Argentina and the United States. The backend repository can be found ([here.](https://github.com/didonatodani/naf_backend))
