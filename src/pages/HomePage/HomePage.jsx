@@ -3,9 +3,11 @@ import constructionImg from "../../assets/construction.jpg";
 import bimImg from "../../assets/bim.png";
 import woodImg from "../../assets/wood.png";
 import "./HomePage.css";
+import clients from "../../data/clients.json";
 
 import { Link } from "react-router-dom";
 import { useRef } from "react";
+import ClientCard from "../../components/ClientCard/ClientCard";
 
 function HomePage() {
   const exploreRef = useRef(null);
@@ -33,24 +35,24 @@ function HomePage() {
         </button>
       </div>
       <div className="manifesto-container" ref={exploreRef}>
-        <h2>Manifesto</h2>
+        <h2>NOSOTROS</h2>
         <p>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi labore
           quam quis, illo eius excepturi? Maxime facere doloremque accusantium
           quidem unde necessitatibus, laboriosam officia enim neque minima,
           soluta illo explicabo. Sed delectus accusantium temporibus aspernatur.
-          Voluptatem, veritatis! Fugiat, perspiciatis nesciunt. Alias officiis
-          tenetur aliquam, natus ut odit tempore? Mollitia facere autem rerum?
-          Libero suscipit, quam dolore possimus perspiciatis quibusdam quae!
-          Totam enim consequatur dolore quasi, quae saepe deleniti praesentium
-          est fugit commodi nulla possimus sed, a corporis. Rem aut, at, dolore
-          quo, veniam modi possimus ex exercitationem esse necessitatibus vel.
+          Voluptatem, veritatis!
         </p>
+
+        <Link to={"/about"}>
+          <button>boton a about page</button>
+        </Link>
       </div>
       <div className="services-container">
         <h2>Our Services</h2>
         <div className="services-article-container">
-          <Link to={"/construction"}>
+          {/* crear un array y map para hacer estos componentes */}
+          <Link to={"/services"}>
             <article className="services-article">
               <h3 className="services-article-title">Construction →</h3>
               <img
@@ -60,7 +62,7 @@ function HomePage() {
               />
             </article>
           </Link>
-          <Link to={"/woodframe"}>
+          <Link to={"/services"}>
             <article className="services-article">
               <h3 className="services-article-title">Wood Frame →</h3>
               <img
@@ -70,7 +72,7 @@ function HomePage() {
               />
             </article>
           </Link>
-          <Link to={"/bim"}>
+          <Link to={"/services"}>
             <article className="services-article">
               <h3 className="services-article-title">BIM Services →</h3>
               <img
@@ -80,6 +82,14 @@ function HomePage() {
               />
             </article>
           </Link>
+        </div>
+      </div>
+      <div className="clients-container">
+        <h2>Our clients</h2>
+        <div className="clients-carousel marquee">
+          {[...clients, ...clients].map((client, index) => {
+            return <ClientCard key={index} client={client} />;
+          })}
         </div>
       </div>
     </section>
