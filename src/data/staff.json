@@ -1,0 +1,38 @@
+[
+  {
+    "fullName": "Carlos García",
+    "position": "Civil Engineer - Water Treatment",
+    "profilePic": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNUlDFIbNbMplS1NrZtsxJ2b4y79qk4mWyiA&s",
+    "linkedinUrl": "https://www.linkedin.com/in/tomasflorian/"
+  },
+  {
+    "fullName": "Ana López",
+    "position": "Architect - BIM Design",
+    "profilePic": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNUlDFIbNbMplS1NrZtsxJ2b4y79qk4mWyiA&s",
+    "linkedinUrl": "https://www.linkedin.com/in/tomasflorian/"
+  },
+  {
+    "fullName": "José Rodríguez",
+    "position": "Structural Engineer - Wood Frame Structure Calculation",
+    "profilePic": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNUlDFIbNbMplS1NrZtsxJ2b4y79qk4mWyiA&s",
+    "linkedinUrl": "https://www.linkedin.com/in/tomasflorian/"
+  },
+  {
+    "fullName": "Marta Fernández",
+    "position": "Water Treatment Technician",
+    "profilePic": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNUlDFIbNbMplS1NrZtsxJ2b4y79qk4mWyiA&s",
+    "linkedinUrl": "https://www.linkedin.com/in/tomasflorian/"
+  },
+  {
+    "fullName": "Luis Martínez",
+    "position": "Civil Engineer - Wood Frame Structure Calculation",
+    "profilePic": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNUlDFIbNbMplS1NrZtsxJ2b4y79qk4mWyiA&s",
+    "linkedinUrl": "https://www.linkedin.com/in/tomasflorian/"
+  },
+  {
+    "fullName": "Patricia Sánchez",
+    "position": "BIM Designer",
+    "profilePic": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNUlDFIbNbMplS1NrZtsxJ2b4y79qk4mWyiA&s",
+    "linkedinUrl": "https://www.linkedin.com/in/tomasflorian/"
+  }
+]

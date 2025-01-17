@@ -1,0 +1,24 @@
+.staff-member-card {
+    /* delete this */
+    border: 1px solid var(--blue);
+    text-align: center;
+    width: 25rem;
+    height: 45rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.staff-pic {
+    width: 100%;
+    height: 20rem;
+    object-fit: cover;
+    object-position: top;
+}
+
+.linkedin-link {
+    width: 30px;
+
+}
