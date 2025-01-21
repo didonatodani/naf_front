@@ -1,5 +1,4 @@
 import homeImage from "../../assets/home.jpg";
-import arrowDown from "../../assets/arrow-down.svg";
 import constructionImg from "../../assets/construction.jpg";
 import bimImg from "../../assets/bim.png";
 import woodImg from "../../assets/wood.png";
@@ -9,6 +8,7 @@ import clients from "../../data/clients.json";
 import { Link } from "react-router-dom";
 import { useRef } from "react";
 import ClientCard from "../../components/ClientCard/ClientCard";
+import ManifestoSection from "../../components/ManifestoSection/ManifestoSection";
 
 function HomePage() {
   const exploreRef = useRef(null);
@@ -28,7 +28,7 @@ function HomePage() {
   };
 
   return (
-    <section className="homepage-section section">
+    <section className="homepage-section">
       <div className="hello-container">
         <div className="hello-left-side">
           <h1>YOUR VISION, OUR MISION</h1>
@@ -44,27 +44,13 @@ function HomePage() {
             }}
             className="explore-btn"
           >
-            Explore NAF{" "}
-            <img src={arrowDown} alt="arrow down icon" id="explore-btn-arrow" />
+            Explore NAF ▼
           </button>
         </div>
         <img src={homeImage} alt="engineers planning" className="home-img" />
       </div>
 
-      <div className="manifesto-container" ref={exploreRef}>
-        <h2>NOSOTROS</h2>
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi labore
-          quam quis, illo eius excepturi? Maxime facere doloremque accusantium
-          quidem unde necessitatibus, laboriosam officia enim neque minima,
-          soluta illo explicabo. Sed delectus accusantium temporibus aspernatur.
-          Voluptatem, veritatis!
-        </p>
-
-        <Link to={"/about"}>
-          <button>boton a about page</button>
-        </Link>
-      </div>
+      <ManifestoSection ref={exploreRef} />
 
       <div className="services-container">
         <h2>Our Services</h2>

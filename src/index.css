@@ -47,9 +47,12 @@ li,
 span,
 strong,
 button,
-small,
 label {
     font-size: 1.8rem;
+}
+
+small{
+    font-size: 1.3rem;
 }
 
 a {
