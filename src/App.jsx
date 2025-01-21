@@ -6,7 +6,7 @@ import Navbar from "./components/Navbar/Navbar";
 import HomePage from "./pages/HomePage/HomePage";
 import AboutPage from "./pages/AboutPage/AboutPage";
 import ContactPage from "./pages/ContactPage/ContactPage";
-import ServicesPage from "./pages/ServicesPage/ServicesPage";
+// import ServicesPage from "./pages/ServicesPage/ServicesPage";
 import ConstructionPage from "./pages/ConstructionPage/ConstructionPage";
 import WoodPage from "./pages/WoodPage/WoodPage";
 import BIMPage from "./pages/BIMPage/BIMPage";
@@ -22,7 +22,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/contact" element={<ContactPage />} />
-        <Route path="/services" element={<ServicesPage/>}/>
+        {/* <Route path="/services" element={<ServicesPage/>}/> */}
 
         {/* projects routes */}
         <Route path="/construction" element={<ConstructionPage />} />

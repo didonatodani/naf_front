@@ -1,18 +1,49 @@
+/* .homepage-section{
+    padding: 0 2rem;
+} */
+
 /* H1 CONTAINER */
-.h1-container {
+.hello-container {
     height: calc(100vh - 12rem);
-    align-content: end;
-    padding: 5rem 2rem;
+    display: flex;
+    flex-wrap: wrap-reverse;
 }
 
-.explore-btn {
-    margin-top: 10rem;
-    background-color: var(--cian);
-    color: var(--grey);
+.hello-left-side {
+    padding: 2rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
 
-    #explore-btn-arrow {
-        align-self: flex-end;
+    h1 {
+        text-align: center;
+        font-size: 4.1rem;
     }
+    .services-array{
+        display: flex;
+        flex-direction: column;
+        span{
+            margin: 0.5rem;
+            font-size: 1.5rem;
+        }
+    }
+
+    .explore-btn {
+        background-color: var(--cian);
+        color: var(--grey);
+
+        #explore-btn-arrow {
+            align-self: flex-end;
+        }
+    }
+}
+
+.home-img {
+    width: 100%;
+    object-fit: cover;
 }
 
 /* MANIFESTO CONTAINER */
@@ -113,17 +144,13 @@
     }
 }
 
+
 /* MEDIA QUERIES */
 
-@media (min-width: 401px) {
-    h1 {
-        font-size: 4.2rem;
-    }
-}
-
 @media (min-width: 750px) {
-    h1 {
+    .hello-left-side h1 {
         font-size: 5rem;
+        text-align: left;
     }
 
     .services-article {
@@ -146,6 +173,27 @@
 }
 
 @media (min-width: 1024px) {
+    .hello-container {
+        padding: 4rem;
+        align-items: center;
+
+        .hello-left-side {
+            width: 50%;
+            height: 100%;
+            align-items: start;
+            padding: 0;
+            padding-left: 2rem;
+        }
+
+        .home-img {
+            width: 50%;
+            height: 100%;
+            border-radius: 3rem;
+        }
+
+    }
+
+
     .services-article {
         h3 {
             font-size: 8rem;

@@ -1,3 +1,4 @@
+import homeImage from "../../assets/home.jpg";
 import arrowDown from "../../assets/arrow-down.svg";
 import constructionImg from "../../assets/construction.jpg";
 import bimImg from "../../assets/bim.png";
@@ -13,6 +14,12 @@ function HomePage() {
   const exploreRef = useRef(null);
   // const scrollUp = useRef(null);
 
+  const servicesArray = [
+    "Water Treatment Plants",
+    "Structural Calculation",
+    "BIM Services",
+  ];
+
   const scrollToSection = (ref) => {
     ref.current.scrollIntoView({
       behavior: "smooth",
@@ -21,19 +28,29 @@ function HomePage() {
   };
 
   return (
-    <section className="section">
-      <div className="h1-container">
-        <h1>YOUR VISION, OUR MISION</h1>
-        <button
-          onClick={() => {
-            scrollToSection(exploreRef);
-          }}
-          className="explore-btn"
-        >
-          Explore NAF{" "}
-          <img src={arrowDown} alt="arrow down icon" id="explore-btn-arrow" />
-        </button>
+    <section className="homepage-section section">
+      <div className="hello-container">
+        <div className="hello-left-side">
+          <h1>YOUR VISION, OUR MISION</h1>
+          <div className="services-array">
+            {servicesArray.map((service, index) => {
+              return <span key={index}>✅ {service}</span>;
+            })}
+          </div>
+
+          <button
+            onClick={() => {
+              scrollToSection(exploreRef);
+            }}
+            className="explore-btn"
+          >
+            Explore NAF{" "}
+            <img src={arrowDown} alt="arrow down icon" id="explore-btn-arrow" />
+          </button>
+        </div>
+        <img src={homeImage} alt="engineers planning" className="home-img" />
       </div>
+
       <div className="manifesto-container" ref={exploreRef}>
         <h2>NOSOTROS</h2>
         <p>
@@ -48,6 +65,7 @@ function HomePage() {
           <button>boton a about page</button>
         </Link>
       </div>
+
       <div className="services-container">
         <h2>Our Services</h2>
         <div className="services-article-container">
