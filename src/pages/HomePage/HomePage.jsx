@@ -1,14 +1,12 @@
 import homeImage from "../../assets/home.jpg";
-import constructionImg from "../../assets/construction.jpg";
-import bimImg from "../../assets/bim.png";
-import woodImg from "../../assets/wood.png";
+
 import "./HomePage.css";
 import clients from "../../data/clients.json";
 
-import { Link } from "react-router-dom";
 import { useRef } from "react";
 import ClientCard from "../../components/ClientCard/ClientCard";
 import ManifestoSection from "../../components/ManifestoSection/ManifestoSection";
+import ServicesSection from "../../components/ServicesSection/ServicesSection";
 
 function HomePage() {
   const exploreRef = useRef(null);
@@ -52,42 +50,8 @@ function HomePage() {
 
       <ManifestoSection ref={exploreRef} />
 
-      <div className="services-container">
-        <h2>Our Services</h2>
-        <div className="services-article-container">
-          {/* crear un array y map para hacer estos componentes */}
-          <Link to={"/services"}>
-            <article className="services-article">
-              <h3 className="services-article-title">Construction →</h3>
-              <img
-                src={constructionImg}
-                alt="construction image"
-                className="services-article-img"
-              />
-            </article>
-          </Link>
-          <Link to={"/services"}>
-            <article className="services-article">
-              <h3 className="services-article-title">Wood Frame →</h3>
-              <img
-                src={woodImg}
-                alt="wood frame image"
-                className="services-article-img"
-              />
-            </article>
-          </Link>
-          <Link to={"/services"}>
-            <article className="services-article">
-              <h3 className="services-article-title">BIM Services →</h3>
-              <img
-                src={bimImg}
-                alt="BIM image"
-                className="services-article-img"
-              />
-            </article>
-          </Link>
-        </div>
-      </div>
+      <ServicesSection ref={exploreRef}/>
+
       <div className="clients-container">
         <h2>Our clients</h2>
         <div className="clients-carousel marquee">

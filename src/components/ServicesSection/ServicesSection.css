@@ -1,0 +1,22 @@
+/* SERVICES CONTAINER */
+.services-section {
+    min-height: 85vh;
+}
+
+.solutions-btns-container{
+    width: fit-content;
+    border: 1px solid var(--grey);
+    background-color:var(--grey);
+    border-radius: 2rem;
+    padding: 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    .service-btn{
+        padding: 0.5rem 2rem;
+        border-radius: 2rem;
+        background-color: var(--white);
+    }
+}
