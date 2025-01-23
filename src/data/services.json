@@ -1,16 +1,22 @@
 [
   {
     "title": "BIM Services",
+    "path": "bim",
+    "icon": "../src/assets/bim-icon.svg",
     "image": "https://img.freepik.com/free-photo/architect-engineer-pointing-architectural-building-prototype-analyzing-construction-model-computer-businessman-designer-working-remote-from-home-real-estate-project-modeling-sketch_482257-33964.jpg?t=st=1737560902~exp=1737564502~hmac=3d6d709f27368bbf1ec4899fd284f48950f3a0925315b8d117b442cd5492f5ee&w=996",
     "description": "Building Information Modeling to optimize engineering projects with accuracy and efficiency."
   },
   {
     "title": "Structural Calculation",
+    "path": "woodframe",
+    "icon": "../src/assets/frame-icon.svg",
     "image": "https://img.freepik.com/free-photo/3d-geometric-abstract-background_1048-16318.jpg?t=st=1737561024~exp=1737564624~hmac=7f11f112c932ff7564c1646d2114d85842f4bc2f9f73d78025a9cf6856c9560d&w=1060",
     "description": "Solutions for wooden structures with sustainable and efficient design, ensuring durability."
   },
   {
     "title": "Water Treatment",
+    "path": "construction",
+    "icon": "../src/assets/water-icon.svg",
     "image": "https://img.freepik.com/free-photo/sets-cooling-towers-data-center-building_1127-3434.jpg?t=st=1737560821~exp=1737564421~hmac=a208a1484c767609dc5031695981512e46589061fea8db891ea2eb4b0c2ca4dc&w=996",
     "description": "Management and execution of construction projects with the highest quality standards and innovation."
   }

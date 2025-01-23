@@ -1,9 +1,18 @@
 /* SERVICES CONTAINER */
 .services-section {
     min-height: 85vh;
+    padding: 3rem 0;
+}
+.services-top-part{
+    height: fit-content;
+    width: 80%;
+    margin: 0 auto;
+    padding: 1.5rem 0;
+    line-height: 4rem;
 }
 
 .solutions-btns-container{
+    margin: 0 auto;
     width: fit-content;
     border: 1px solid var(--grey);
     background-color:var(--grey);
@@ -12,11 +21,14 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     gap: 1rem;
     .service-btn{
         padding: 0.5rem 2rem;
         border-radius: 2rem;
         background-color: var(--white);
+        font-weight: 500;
+        display: flex;
+        gap: 0.5rem;
     }
 }

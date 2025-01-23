@@ -4,7 +4,7 @@ import "./HomePage.css";
 import clients from "../../data/clients.json";
 
 import { useRef } from "react";
-import ClientCard from "../../components/ClientCard/ClientCard";
+import ClientCard from "../../components/ClientCard/ClientCard.jsx";
 import ManifestoSection from "../../components/ManifestoSection/ManifestoSection";
 import ServicesSection from "../../components/ServicesSection/ServicesSection";
 
@@ -55,9 +55,9 @@ function HomePage() {
       <div className="clients-container">
         <h2>Our clients</h2>
         <div className="clients-carousel marquee">
-          {[...clients, ...clients].map((client, index) => {
+          {/* {[...clients, ...clients].map((client, index) => {
             return <ClientCard key={index} client={client} />;
-          })}
+          })} */}
         </div>
       </div>
     </section>
