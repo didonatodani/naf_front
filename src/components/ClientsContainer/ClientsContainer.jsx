@@ -10,7 +10,7 @@ function ClientsContainer(){
         <small>/OUR CLIENTS</small>
         <div className="clients-carousel marquee">
           {[...clients, ...clients, ...clients].map((client, index) => {
-            return <ClientCard key={client.clientName} client={client} />;
+            return <ClientCard key={`${client.clientName}_${index}`} client={client} />;
           })}
         </div>
       </div>

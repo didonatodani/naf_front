@@ -9,15 +9,14 @@ function Footer() {
         <Link to={"/"}>
           <img src={Logo} alt="NAF logo" id="footer-logo" />
         </Link>
-        <small>NAF © 2025</small>
+        <small className="footer-span">NAF © 2025</small>
       </div>
       <div className="footer-link-div">
-        <Link to={"/contact"} className="footer-btn">
-          Contact Us
+        <Link to={"/contact"} className="footer-link">
+          Message us
         </Link>
-        {/* click and copy or click and call/email */}
-        <small>email@email</small>
-        <small>+23423435345</small>
+        <a href="tel:+34695771431" className="footer-link">+34695771431</a>
+        <a href="mailto:info@naf-group.com" className="footer-link">info@naf-group.com</a>
       </div>
     </footer>
   );
