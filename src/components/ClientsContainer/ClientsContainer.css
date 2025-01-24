@@ -12,8 +12,8 @@
     margin: 4rem 0;
     display: flex;
     flex-wrap: nowrap;
-    gap: 12rem;
-    animation: marquee 10s linear infinite;
+    gap: 6rem;
+    animation: marquee 5s linear infinite;
 }
 
 @keyframes marquee {
@@ -23,4 +23,9 @@
 
 /* MEDIA QUERIES */
 
-@media ()
+@media (min-width: 750px){
+    .clients-carousel {
+        gap: 12rem;
+        animation: marquee 15s linear infinite;
+    }
+}
