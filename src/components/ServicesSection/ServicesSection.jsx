@@ -1,10 +1,20 @@
+import { useState } from "react";
 import "./ServicesSection.css";
 import ServicesData from "../../data/services.json";
 import ServiceCard from "../ServiceCard/ServiceCard";
-import { useState } from "react";
+
+import WoodIcon from "../../assets/woodframe-icon.svg";
+import WaterIcon from "../../assets/construction-icon.svg";
+import BimIcon from "../../assets/bim-icon.svg";
 
 function ServicesSection() {
   const [selectedService, setSelectedService] = useState(0);
+
+  const serviceIcons = {
+    woodframe: WoodIcon,
+    bim: BimIcon,
+    construction: WaterIcon,
+  };
 
   return (
     <section className="services-section">
@@ -20,11 +30,12 @@ function ServicesSection() {
           return (
             <button
               key={index}
-              className={`service-btn ${selectedService === index ? "active" : ""}`}
+              className={`service-btn ${
+                selectedService === index ? "active" : ""
+              }`}
               onClick={() => setSelectedService(index)}
             >
-              {/* check if this icon works deployed */}
-              <img src={service.icon} alt="service icon" />
+              <img src={serviceIcons[service.path] || ""} alt="service icon" />
               {service.title}
             </button>
           );
