@@ -6,7 +6,6 @@ function ClientCard ({client}){
     return(
         <article className="client-card">
             <img src={logo} alt="" className="client-img"/>
-            <span className="client-name">{clientName}</span>
         </article>
     )
 }

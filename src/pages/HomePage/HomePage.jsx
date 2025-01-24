@@ -1,12 +1,10 @@
 import homeImage from "../../assets/home.jpg";
-
 import "./HomePage.css";
-import clients from "../../data/clients.json";
 
 import { useRef } from "react";
-import ClientCard from "../../components/ClientCard/ClientCard.jsx";
 import ManifestoSection from "../../components/ManifestoSection/ManifestoSection";
 import ServicesSection from "../../components/ServicesSection/ServicesSection";
+import ClientsContainer from "../../components/ClientsContainer/ClientsContainer.jsx";
 
 function HomePage() {
   const exploreRef = useRef(null);
@@ -29,7 +27,7 @@ function HomePage() {
     <section className="homepage-section">
       <div className="hello-container">
         <div className="hello-left-side">
-          <h1>YOUR VISION, OUR MISION</h1>
+          <h1>YOUR VISION, OUR&nbsp;MISION</h1>
           <div className="services-array">
             {servicesArray.map((service, index) => {
               return <span key={index}>✅ {service}</span>;
@@ -50,16 +48,9 @@ function HomePage() {
 
       <ManifestoSection ref={exploreRef} />
 
-      <ServicesSection ref={exploreRef}/>
+      <ServicesSection />
 
-      <div className="clients-container">
-        <h2>Our clients</h2>
-        <div className="clients-carousel marquee">
-          {/* {[...clients, ...clients].map((client, index) => {
-            return <ClientCard key={index} client={client} />;
-          })} */}
-        </div>
-      </div>
+      <ClientsContainer/>
     </section>
   );
 }

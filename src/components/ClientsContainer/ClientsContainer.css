@@ -1,0 +1,26 @@
+.clients-container {
+    background-color: var(--grey);
+    padding: 4rem 0;
+    position: relative;
+    overflow: hidden;
+    small{
+        margin: 5rem;
+    }
+}
+
+.clients-carousel {
+    margin: 4rem 0;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 12rem;
+    animation: marquee 10s linear infinite;
+}
+
+@keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
+/* MEDIA QUERIES */
+
+@media ()
